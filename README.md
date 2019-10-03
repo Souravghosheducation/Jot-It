@@ -1,2 +1,3 @@
 # Jot-It
 A simple responsive note app built with Vue.js.
+![Image of Preview](https://github.com/Souravghosheducation/Jot-It/blob/master/preview.png)

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=yes, width=device-width, initial-scale=1.0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" sizes="192x192" href="jot.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <title>Jot It!!!</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <p class="heading">{{ title }}</p>
+      <div class="title-holder">
+        <div class="lab-txt">
+          <p class="titleclass">Title</p>
+        </div>
+        <input
+          class="in-txt"
+          type="text"
+          name=""
+          value="title"
+          v-model="note.textt"
+        />
+      </div>
+      <div class="text-area">
+        <textarea
+          class="main-txt"
+          id="mt"
+          autofocus
+          placeholder="Add Note"
+          v-model="note.text"
+        ></textarea>
+      </div>
+      <div class="but-wrap">
+        <button class="button" @click="addNote">Create Note</button>
+      </div>
+      <div class="div-add" v-for="(note, index) in notes">
+        <div class="top">
+          <button class="close" @click="removeNote(index)"></button>
+          <i class="div-add-time-date">{{ note.date }}</i>
+        </div>
+        <div class="title">
+          {{ note.textt }}
+        </div>
+        <div class="note" id="nt">
+          {{ note.text }}
+        </div>
+      </div>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          title: "Jot It!!! ",
+          note: {
+            text: "",
+            textt: "",
+            date: ""
+          },
+          notes: [
+            {
+              text: "Sample Text",
+              textt: "Sample Text",
+              date: new Date(Date.now()).toLocaleString()
+            }
+          ]
+        },
+        methods: {
+          addNote() {
+            let { text, textt, title, color } = this.note;
+            this.notes.push({
+              text,
+              textt,
+              date: new Date(Date.now()).toLocaleString()
+            });
+          },
+          removeNote(index) {
+            this.$delete(this.notes, index);
+          }
+        },
+        mounted() {
+          if (localStorage.getItem("notes"))
+            this.notes = JSON.parse(localStorage.getItem("notes"));
+        },
+        watch: {
+          notes: {
+            handler() {
+              localStorage.setItem("notes", JSON.stringify(this.notes));
+            },
+            deep: true
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

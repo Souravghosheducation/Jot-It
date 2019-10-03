@@ -1,0 +1,299 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+#app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  width: 95%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: pre-line;
+}
+
+.main-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  width: 95%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+}
+
+.text-area {
+  margin: auto !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  width: 95%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+.titleclass {
+  font-size: 30px;
+  padding-top: 10px;
+  color: white;
+}
+
+.title-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  width: 95%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  margin: 10px;
+}
+
+.in-txt {
+  font-size: 30px;
+  padding: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 2px solid #fb90b7;
+  text-decoration: none;
+}
+
+.lab-txt {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: #fb90b7;
+  height: 54px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+
+.but-wrap {
+  margin: 10px;
+}
+
+input {
+  width: 80%;
+}
+
+textarea {
+  margin: auto !important;
+  overflow-y: scroll;
+  resize: none;
+  height: 500px;
+  font-size: 30px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  border: 2px solid #fb90b7;
+  padding: 10px;
+}
+
+/* scrollbar style*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fb90b7;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff73a6;
+}
+
+/* scrollbar code end */
+/* custom button */
+button {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  font-size: 20px;
+}
+
+.button {
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 10px 20px 10px;
+  border: 2px solid #fb90b7;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #fb90b7;
+  color: white;
+  border-color: #fb90b7;
+  border-radius: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* custom button code end */
+.top {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+.heading {
+  font-family: 'Merienda One', cursive;
+  font-size: 40px;
+  color: #fb90b7;
+}
+
+.close {
+  text-align: right;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 10px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.close:before,
+.close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -5px;
+  display: block;
+  height: 2px;
+  width: 25px;
+  background-color: black;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.close:after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.close:hover:before,
+.close:hover:after {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+/* div with new notes */
+.div-add {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f4c4f3;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#ffcffe), to(#ffe1fe));
+  background: linear-gradient(to right, #ffcffe, #ffe1fe);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.note {
+  font-size: 20px;
+}
+
+.div-add-time-date {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.div-add {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgb a(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgb a(0, 0, 0, 0.24);
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.div-add:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-transform: scale(1.008);
+          transform: scale(1.008);
+}
+
+/* div with new notes end*/
+/* mobile-responsive */
+@media only screen and (max-width: 980px) {
+  .titleclass {
+    font-size: 20px;
+    padding-top: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

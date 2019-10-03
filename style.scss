@@ -1,0 +1,227 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+$primary-color: #d01257;
+$primary-font: "Roboto", sans-serif;
+$primary-fontsize: 30px;
+$secondary-fontsize: 25px;
+$sec-color: #fb90b7;
+$auto-margin: 10px;
+
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+@mixin priFlex {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 95%;
+  justify-content: center;
+  align-items: center;
+}
+#app {
+  @include priFlex();
+  white-space: pre-line;
+}
+.main-txt {
+  @include priFlex();
+  font-size: $secondary-fontsize;
+}
+.text-area {
+  margin: auto !important;
+  @include priFlex();
+  margin: $auto-margin;
+}
+
+.titleclass {
+  font-size: $primary-fontsize;
+  padding-top: 10px;
+  color: white;
+}
+.title-holder {
+  @include priFlex();
+  flex-direction: row;
+  margin: $auto-margin;
+}
+.in-txt {
+  font-size: $primary-fontsize;
+  padding: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 2px solid #fb90b7;
+  text-decoration: none;
+}
+.lab-txt {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: #fb90b7;
+  height: 54px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+.but-wrap {
+  margin: $auto-margin;
+}
+input {
+  width: 80%;
+}
+textarea {
+  margin: auto !important;
+  overflow-y: scroll;
+  resize: none;
+  height: 500px;
+  font-size: $primary-fontsize;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  border: 2px solid #fb90b7;
+  padding: 10px;
+}
+
+/* scrollbar style*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #fb90b7;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff73a6;
+}
+/* scrollbar code end */
+
+/* custom button */
+button {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  font-size: 20px;
+}
+.button {
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 10px 20px 10px;
+  border: 2px solid #fb90b7;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #fb90b7;
+  color: white;
+  border-color: #fb90b7;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+/* custom button code end */
+
+.top {
+  text-align: right;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+.heading{
+  font-family: 'Merienda One', cursive;
+  font-size: 40px;
+  color: #fb90b7;
+}
+
+.close {
+  text-align: right;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  box-sizing: border-box;
+  line-height: 10px;
+  display: inline-block;
+  padding: 10px;
+}
+.close:before,
+.close:after {
+  transform: rotate(-45deg);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -5px;
+  display: block;
+  height: 2px;
+  width: 25px;
+  background-color: black;
+  transition: all 0.25s ease-out;
+}
+.close:after {
+  transform: rotate(-135deg);
+}
+.close:hover:before,
+.close:hover:after {
+  transform: rotate(0deg);
+}
+
+/* div with new notes */
+.div-add {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f4c4f3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fc67fa,
+    #f4c4f3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffcffe,
+    #ffe1fe
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.title {
+  font-size: 25px;
+  font-weight: 500;
+}
+.note {
+  font-size: 20px;
+}
+.div-add-time-date {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.div-add {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgb a(0, 0, 0, 0.24);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.div-add:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transform: scale(1.008);
+}
+
+/* div with new notes end*/
+
+/* mobile-responsive */
+
+@media only screen and (max-width: 980px) {
+  .titleclass {
+    font-size: 20px;
+    padding-top: 15px;
+  }
+}

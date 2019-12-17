@@ -1,7 +1,7 @@
 body {
   padding: 0px;
   margin: 0px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat" !important;
 }
 
 p {
@@ -131,7 +131,7 @@ textarea {
   height: 500px;
   font-size: 30px;
   border-radius: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   border: 2px solid #fb90b7;
   padding: 10px;
@@ -201,8 +201,10 @@ button {
 }
 
 .heading {
-  font-family: 'Merienda One', cursive;
+  font-family: 'Montserrat';
+  font-weight: 600;
   font-size: 40px;
+  padding-top: 10px;
   color: #fb90b7;
 }
 
